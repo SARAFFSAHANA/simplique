@@ -1,0 +1,13 @@
+Cost Optimization of Billing Records in Azure Serverless Architecture
+Problem Summary:
+Your billing service stores over 2 million billing records in Azure Cosmos DB, with each record up to 300 KB. 
+Older records (>3 months) are rarely accessed.This leads to high storage and RU costs.
+You want to reduce costs without changing API contracts, ensuring zero downtime, and maintaining data availability (within seconds latency).
+
+Solution Overview:
+Approach: Tiered Storage with Fallback Logic
+Keep recent records (< 3 months) in Cosmos DB.
+
+Archive older records to Azure Blob Storage (Hot or Cool tier).
+
+API remains unchanged — it first queries Cosmos DB; if not found, it fetches from Blob.
