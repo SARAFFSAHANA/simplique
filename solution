@@ -11,3 +11,10 @@ Keep recent records (< 3 months) in Cosmos DB.
 Archive older records to Azure Blob Storage (Hot or Cool tier).
 
 API remains unchanged — it first queries Cosmos DB; if not found, it fetches from Blob.
+
+
+My chatgpt link:
+https://chatgpt.com/share/68590985-c3b0-8007-bab4-30839f1ffdaf
+
+
+
